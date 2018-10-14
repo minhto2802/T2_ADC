@@ -4,10 +4,9 @@ from .base_options import BaseOptions
 class TrainOptions(BaseOptions):
     def initialize(self, parser):
         parser = BaseOptions.initialize(self, parser)
-        parser.add_argument('--continue_train', type=bool, default=True,
-                            help='continue training: load the latest model')
-        parser.add_argument('--epoch_count', type=int, default=1,
-                            help='the starting epoch count, we save the model by <epoch_count>, <epoch_count>+<save_latest_freq>, ...')
+        print('abc')
+        parser.add_argument('--continue_train', type=bool, default=True, help='continue training: load the latest model')
+        parser.add_argument('--epoch_count', type=int, default=1, help='the starting epoch count, we save the model by <epoch_count>, <epoch_count>+<save_latest_freq>, ...')
         parser.add_argument('--norm_data', action='store_true', help='normalize inputs to 0 mean and 1 std')
         parser.add_argument('--translation', type=list, default=None, help='size of pre-cropped inputs')
         parser.add_argument('--train_size', type=int, default=1, help='size of training set (set <= 1 if percentage')
